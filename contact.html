@@ -11,6 +11,12 @@
     function onSubmit() {
       document.getElementById("contactForm").submit()
     }
+    // Reset form on page reload
+    window.onbeforeunload = () => {
+      for (const form of document.getElementsByTagName('form')) {
+        form.reset();
+      }
+    }
   </script>
 </head>
 
