@@ -1,0 +1,24 @@
+{
+  "name": "hannaha-dot-com",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/nathanalderson/hannaha-dot-com#readme",
+  "bugs": {
+    "url": "https://github.com/nathanalderson/hannaha-dot-com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanalderson/hannaha-dot-com.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
