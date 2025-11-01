@@ -1,3 +1,10 @@
 # Jekyll configuration
 port: 4002
 
+heroicons:
+  variant: 'solid'
+  default_class:
+    solid: "size-5"
+    outline: "size-5"
+    mini: "size-4"
+    micro: "size-3"

@@ -151,6 +151,9 @@ GEM
     jekyll-github-metadata (2.16.1)
       jekyll (>= 3.4, < 5.0)
       octokit (>= 4, < 7, != 4.4.0)
+    jekyll-heroicons (0.4.2)
+      jekyll
+      nokogiri
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-mentions (1.6.0)
@@ -306,6 +309,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-contentblocks
+  jekyll-heroicons
   minima (>= 2.0)
   tzinfo-data
   webrick (~> 1.8)

@@ -10,38 +10,63 @@ title: Contact
 </div>
 
 <!-- Contact Form -->
-<form id="contactForm" class="space-y-6 text-left" action="https://formspree.io/f/xkgpqlgb" method="POST">
-  <!-- Subject Field -->
-  <input name="subject" type="hidden" value="Website contact from {{ name }}" />
+<form
+  id="contactForm"
+  class="space-y-6 text-left"
+  action="https://formspree.io/f/xkgpqlgb"
+  method="POST">
+    <!-- Subject Field -->
+  <input
+    name="subject"
+    type="hidden"
+    value="Website contact from {{ name }}" />
 
   <!-- Name Field -->
   <div>
     <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Name *</label>
-    <input type="text" id="name" name="name" required
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
   </div>
 
   <!-- Email Field -->
   <div>
     <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email *</label>
-    <input type="email" id="email" name="email" required
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
   </div>
 
   <!-- Message Field -->
   <div>
     <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message *</label>
-    <textarea id="message" name="message" rows="5" required
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      required
       class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none"></textarea>
   </div>
 
   <!-- Required -->
-  <input class="hidden" type="text" name="_gotcha" />
+  <input
+    class="hidden"
+    type="text"
+    name="_gotcha" />
 
   <!-- Submit Button -->
   <div class="flex flex-col-reverse sm:flex-row gap-4 justify-between items-center">
-    <a href="index.html" class="text-slate-600 hover:text-brand-500 transition-colors">← Back to Home</a>
-    <button type="submit" data-sitekey="6LfSrv0rAAAAAAWlHiNB-OlhG3SaHUCyGNN2aOM7" data-callback='onSubmit'
+    {% include back_link.html %}
+    <button
+      type="submit"
+      data-sitekey="6LfSrv0rAAAAAAWlHiNB-OlhG3SaHUCyGNN2aOM7"
+      data-callback='onSubmit'
       data-action='submit'
       class="g-recaptcha px-8 py-3 bg-brand-500 text-white rounded-lg hover:bg-brand-600 transition-colors duration-200 font-medium shadow-md hover:shadow-lg cursor-pointer">
       Send Message
@@ -50,16 +75,19 @@ title: Contact
 </form>
 
 {% contentfor extra_head %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-  function onSubmit() {
+  <script
+    src="https://www.google.com/recaptcha/api.js"
+    async
+    defer></script>
+  <script>
+      function onSubmit() {
     document.getElementById("contactForm").submit()
-  }
-  // Reset form on page reload
-  window.onbeforeunload = () => {
+      }
+      // Reset form on page reload
+      window.onbeforeunload = () => {
     for (const form of document.getElementsByTagName('form')) {
       form.reset();
     }
-  }
-</script>
+      }
+  </script>
 {% endcontentfor %}

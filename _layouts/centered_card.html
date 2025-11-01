@@ -3,7 +3,13 @@ layout: default
 ---
 
 <div class="bg-linear-to-br from-brand-50 to-slate-50 min-h-screen flex items-center justify-center p-6">
-  <main class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-12 text-center border border-brand-50">
-    {{ content }}
+  <main class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-12 border border-brand-50">
+    {% if page.name != "index.html" %}
+      {% include back_link.html %}
+    {% endif %}
+
+    <div class="text-center">
+      {{ content }}
+    </div>
   </main>
 </div>
