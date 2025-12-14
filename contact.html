@@ -16,10 +16,12 @@ title: Contact
   action="https://formspree.io/f/xkgpqlgb"
   method="POST">
     <!-- Subject Field -->
+  {% raw %}
   <input
     name="subject"
     type="hidden"
     value="Website contact from {{ name }}" />
+  {% endraw %}
 
   <!-- Name Field -->
   <div>
